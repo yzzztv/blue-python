@@ -83,6 +83,10 @@
       overflow: hidden;
       white-space: nowrap;
     }
+    .carousel-wrapper {
+      overflow: hidden;
+      width: 100%;
+    }
     .carousel {
       display: inline-block;
       animation: scroll-left 30s linear infinite;
@@ -165,7 +169,14 @@
   <section class="section fade-in">
     <h2>Gallery</h2>
     <div class="gallery-container">
-      <div class="carousel" id="carousel">
+      <div class="carousel-wrapper" id="carousel">
+        <img src="1.jpg" onclick="openLightbox(this.src)" />
+        <img src="2.jpg" onclick="openLightbox(this.src)" />
+        <img src="3.jpg" onclick="openLightbox(this.src)" />
+        <img src="4.jpg" onclick="openLightbox(this.src)" />
+        <img src="5.jpg" onclick="openLightbox(this.src)" />
+        <img src="6.jpg" onclick="openLightbox(this.src)" />
+        <img src="7.jpg" onclick="openLightbox(this.src)" />
         <img src="1.jpg" onclick="openLightbox(this.src)" />
         <img src="2.jpg" onclick="openLightbox(this.src)" />
         <img src="3.jpg" onclick="openLightbox(this.src)" />
