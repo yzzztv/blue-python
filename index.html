@@ -26,10 +26,16 @@
       padding: 2rem;
     }
     header {
-      background: url('bghead.webp') no-repeat center top;
+      background: url('bghead.webp') no-repeat center center;
       background-size: cover;
-      background-position: center top;
+      height: 100vh;
+      display: flex;
+      align-items: center; /* center secara vertikal */
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 1rem;
     }
+
 
     nav {
       display: flex;
