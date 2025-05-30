@@ -25,10 +25,15 @@
       margin: 2rem;
       padding: 2rem;
     }
-    header {
-      background: url('bghead.webp') no-repeat center center;
-      background-size: cover;
-      height: 300px;
+    /* Gaya untuk elemen yang menggunakan bghead.webp sebagai latar belakang */
+    header { /* Ganti .header dengan elemen yang kamu gunakan */
+      background-image: url('bghead.webp');
+      background-size: auto; /* Menjaga ukuran asli gambar */
+      background-repeat: no-repeat; /* Mencegah gambar berulang */
+      background-attachment: fixed; /* Membuat gambar tetap rekat saat scroll */
+      background-position: center top; /* Posisi gambar di tengah atas */
+      width: 100%; /* Lebar elemen mengikuti layar */
+      height: 100vh; /* Tinggi elemen, sesuaikan jika perlu */
     }
     nav {
       display: flex;
