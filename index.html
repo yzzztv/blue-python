@@ -19,16 +19,15 @@
       color: #00f0ff;
       padding: 0;
     }
-    .section {
-      background: rgba(0, 0, 0, 0.75);
-      border-radius: 2rem;
-      margin: 2rem;
-      padding: 2rem;
-    }
     header {
       background: url('bghead.webp') no-repeat center center;
       background-size: cover;
-      height: 300px;
+      background-position: center top;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     nav {
       display: flex;
@@ -42,7 +41,6 @@
       padding: 10px 0;
       overflow-x: auto;
     }
-
     .menu-container {
       display: flex;
       justify-content: center;
@@ -51,8 +49,8 @@
       flex-wrap: nowrap;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
     }
-
     .menu-container a {
       flex: 0 0 auto;
       background-color: cyan;
@@ -65,19 +63,21 @@
       white-space: nowrap;
       transition: background-color 0.3s ease;
     }
-
     .menu-container a:hover {
       background-color: #00e5ff;
     }
-
-/* Responsive: Tambahan kecil untuk memastikan menu tidak mengganggu di layar kecil */
-@media (max-width: 768px) {
-  .menu-container {
-    justify-content: flex-start;
-    padding: 10px 5px;
-  }
-}
-
+    .section {
+      background: rgba(0, 0, 0, 0.75);
+      border-radius: 2rem;
+      margin: 2rem;
+      padding: 2rem;
+      border: 2px solid white;
+      box-shadow: 0 0 20px white;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
     .gallery-container {
       overflow: hidden;
       white-space: nowrap;
@@ -127,19 +127,6 @@
       padding: 2rem;
       font-size: 0.9rem;
     }
-    @media (max-width: 768px) {
-      header {
-        background-size: contain;
-        height: 200px;
-      }
-      .menu {
-        display: none;
-        flex-direction: column;
-      }
-      .dropdown-toggle {
-        display: block;
-      }
-    }
   </style>
 </head>
 <body>
@@ -153,17 +140,18 @@
         <a href="https://x.com/Bluee_python" target="_blank">Twitter</a>
         <a href="https://dexscreener.com" target="_blank">Dexscreener</a>
       </div>
+    </nav>
   </nav>
 
   <section id="home" class="section">
     <h2>Welcome to Blue Python</h2>
-    <p>In the realm of Base chain, where speed meets innovation, a new meme legend arises: Blue Python. Built for degen dreamers and crypto explorers, this token blends humor, history, and hype into one sleek package.</p>
-    <p>Forget boring charts and slow chains. Blue Python brings the chaos of memes and the legacy of $PYTHON from Cardano into the fearless world of Base. You’re not just early. You’re legendary.</p>
+    <p>In the realm of Base chain, where speed meets innovation, a new meme legend arises: Blue Python...</p>
+    <p>Forget boring charts and slow chains. Blue Python brings the chaos of memes and the legacy of $PYTHON from Cardano...</p>
   </section>
 
   <section id="about" class="section">
     <h2>About</h2>
-    <p>Blue Python is a tribute to two icons of crypto culture: the legendary $PYTHON from Cardano and the fast, fun, and fearless Base chain. It’s not just another meme – it’s a celebration of speed, community, and crypto’s rebellious spirit. If you know, you know. 🐍</p>
+    <p>Blue Python is a tribute to two icons of crypto culture: the legendary $PYTHON from Cardano and the fast, fun, and fearless Base chain...</p>
   </section>
 
   <section class="section">
@@ -192,7 +180,7 @@
   </section>
 
   <section class="section">
-    <p>Join the memevoution. This isn’t just a token; it’s a symbol of how wild, weird, and wonderful crypto can be. Don’t just hold – strike with Blue Python and make your mark on Base history.</p>
+    <p>Join the memevoution. This isn’t just a token; it’s a symbol of how wild, weird, and wonderful crypto can be...</p>
   </section>
 
   <footer>
@@ -205,10 +193,6 @@
   </div>
 
   <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.menu');
-      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-    }
     function openLightbox(src) {
       const lightbox = document.getElementById('lightbox');
       const img = document.getElementById('lightbox-img');
@@ -220,4 +204,4 @@
     }
   </script>
 </body>
-  </html>
+</html>
