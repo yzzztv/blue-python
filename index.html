@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blue Python - Base Chain Memecoin</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
@@ -26,15 +26,10 @@
       padding: 2rem;
     }
     header {
-      text-align: center;
-      padding: 80px 20px 20px;
-      color: #fff;
-      text-shadow: 1px 1px 2px #000;
       background: url('bghead.webp') no-repeat center center;
       background-size: cover;
+      height: 300px;
     }
-
-
     nav {
       display: flex;
       justify-content: center;
@@ -49,7 +44,6 @@
     }
 
     .menu-container {
-      position: relative; /* ➕ Untuk pseudo-element */
       display: flex;
       justify-content: center;
       gap: 10px;
@@ -57,7 +51,6 @@
       flex-wrap: nowrap;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
-      scroll-behavior: smooth;
     }
 
     .menu-container a {
@@ -77,41 +70,13 @@
       background-color: #00e5ff;
     }
 
-    /* ➕ Gradient hint di kanan */
-    .menu-container::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 30px;
-      height: 100%;
-      background: linear-gradient(to right, transparent, black);
-      pointer-events: none;
-    }
-
-    /* ➕ Panah scroll */
-    .scroll-indicator {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 20px;
-      color: cyan;
-      animation: bounce 1s infinite;
-      pointer-events: none;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(-50%) translateX(0); }
-      50% { transform: translateY(-50%) translateX(5px); }
-    }
-
-    @media (max-width: 768px) {
-      .menu-container {
-        justify-content: flex-start;
-        padding: 10px 5px;
-      }
-    }
+/* Responsive: Tambahan kecil untuk memastikan menu tidak mengganggu di layar kecil */
+@media (max-width: 768px) {
+  .menu-container {
+    justify-content: flex-start;
+    padding: 10px 5px;
+  }
+}
 
     .gallery-container {
       overflow: hidden;
@@ -187,9 +152,7 @@
         <a href="#tokenomic">Tokenomic</a>
         <a href="https://x.com/Bluee_python" target="_blank">Twitter</a>
         <a href="https://dexscreener.com" target="_blank">Dexscreener</a>
-        <div class="scroll-indicator">➤</div> <!-- ➕ Panah scroll -->
       </div>
-    </nav>
   </nav>
 
   <section id="home" class="section">
@@ -205,16 +168,16 @@
 
   <section class="section">
     <h2>Gallery</h2>
-    <div class="carousel" id="carousel">
-      <img src="1.jpg" onclick="openLightbox(this.src)" />
-      <img src="2.jpg" onclick="openLightbox(this.src)" />
-      <img src="3.jpg" onclick="openLightbox(this.src)" />
-      <img src="4.jpg" onclick="openLightbox(this.src)" />
-      <img src="5.jpg" onclick="openLightbox(this.src)" />
-      <img src="6.jpg" onclick="openLightbox(this.src)" />
-      <img src="7.jpg" onclick="openLightbox(this.src)" />
-    </div>
-
+    <div class="gallery-container">
+      <div class="carousel" id="carousel">
+        <img src="1.jpg" onclick="openLightbox(this.src)" />
+        <img src="2.jpg" onclick="openLightbox(this.src)" />
+        <img src="3.jpg" onclick="openLightbox(this.src)" />
+        <img src="4.jpg" onclick="openLightbox(this.src)" />
+        <img src="5.jpg" onclick="openLightbox(this.src)" />
+        <img src="6.jpg" onclick="openLightbox(this.src)" />
+        <img src="7.jpg" onclick="openLightbox(this.src)" />
+      </div>
     </div>
   </section>
 
@@ -257,4 +220,4 @@
     }
   </script>
 </body>
-</html>
+  </html>
