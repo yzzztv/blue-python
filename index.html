@@ -28,8 +28,12 @@
     header {
       background: url('bghead.webp') no-repeat center center;
       background-size: cover;
-      height: 300px;
+      background-position: center top;
+      min-height: 250px;
+      height: 40vh;
+      width: 100%;
     }
+
     nav {
       display: flex;
       justify-content: center;
@@ -200,16 +204,24 @@
 
   <section class="section">
     <h2>Gallery</h2>
-    <div class="gallery-container">
-      <div class="carousel" id="carousel">
-        <img src="1.jpg" onclick="openLightbox(this.src)" />
-        <img src="2.jpg" onclick="openLightbox(this.src)" />
-        <img src="3.jpg" onclick="openLightbox(this.src)" />
-        <img src="4.jpg" onclick="openLightbox(this.src)" />
-        <img src="5.jpg" onclick="openLightbox(this.src)" />
-        <img src="6.jpg" onclick="openLightbox(this.src)" />
-        <img src="7.jpg" onclick="openLightbox(this.src)" />
-      </div>
+    <div class="carousel" id="carousel">
+      <img src="1.jpg" onclick="openLightbox(this.src)" />
+      <img src="2.jpg" onclick="openLightbox(this.src)" />
+      <img src="3.jpg" onclick="openLightbox(this.src)" />
+      <img src="4.jpg" onclick="openLightbox(this.src)" />
+      <img src="5.jpg" onclick="openLightbox(this.src)" />
+      <img src="6.jpg" onclick="openLightbox(this.src)" />
+      <img src="7.jpg" onclick="openLightbox(this.src)" />
+  <!-- Duplikat -->
+      <img src="1.jpg" onclick="openLightbox(this.src)" />
+      <img src="2.jpg" onclick="openLightbox(this.src)" />
+      <img src="3.jpg" onclick="openLightbox(this.src)" />
+      <img src="4.jpg" onclick="openLightbox(this.src)" />
+      <img src="5.jpg" onclick="openLightbox(this.src)" />
+      <img src="6.jpg" onclick="openLightbox(this.src)" />
+      <img src="7.jpg" onclick="openLightbox(this.src)" />
+    </div>
+
     </div>
   </section>
 
