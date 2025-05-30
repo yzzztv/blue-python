@@ -44,6 +44,7 @@
     }
 
     .menu-container {
+      position: relative; /* ➕ Untuk pseudo-element */
       display: flex;
       justify-content: center;
       gap: 10px;
@@ -51,6 +52,7 @@
       flex-wrap: nowrap;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
     }
 
     .menu-container a {
@@ -70,13 +72,41 @@
       background-color: #00e5ff;
     }
 
-/* Responsive: Tambahan kecil untuk memastikan menu tidak mengganggu di layar kecil */
-@media (max-width: 768px) {
-  .menu-container {
-    justify-content: flex-start;
-    padding: 10px 5px;
-  }
-}
+    /* ➕ Gradient hint di kanan */
+    .menu-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30px;
+      height: 100%;
+      background: linear-gradient(to right, transparent, black);
+      pointer-events: none;
+    }
+
+    /* ➕ Panah scroll */
+    .scroll-indicator {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: cyan;
+      animation: bounce 1s infinite;
+      pointer-events: none;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(-50%) translateX(0); }
+      50% { transform: translateY(-50%) translateX(5px); }
+    }
+
+    @media (max-width: 768px) {
+      .menu-container {
+        justify-content: flex-start;
+        padding: 10px 5px;
+      }
+    }
 
     .gallery-container {
       overflow: hidden;
@@ -152,7 +182,9 @@
         <a href="#tokenomic">Tokenomic</a>
         <a href="https://x.com/Bluee_python" target="_blank">Twitter</a>
         <a href="https://dexscreener.com" target="_blank">Dexscreener</a>
+        <div class="scroll-indicator">➤</div> <!-- ➕ Panah scroll -->
       </div>
+    </nav>
   </nav>
 
   <section id="home" class="section">
